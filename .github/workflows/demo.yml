@@ -2,7 +2,7 @@ name: Deploy website
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
           name: My-Artifacts
           path: |
             artifacts
-            package.json  #redundant code but just used for example
+            package.json
 
   deploy:
     needs: build
